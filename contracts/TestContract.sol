@@ -1,10 +1,10 @@
-pragma solidity ^0.6.0;
+pragma solidity ^0.6.4;
 
 import "./HomomorphicHiding.sol";
 
 contract TestContract
 {
-	HomomorphicHiding.E stru;
+	E stru;
 	constructor() public
 	{
 		
