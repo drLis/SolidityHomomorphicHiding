@@ -4,9 +4,9 @@ import "./HomomorphicHiding.sol";
 
 contract TestContract
 {
-	E stru;
+	E public stru;
 	constructor() public
 	{
-		
+		stru = HomomorphicHiding.e(3);
 	}
 }

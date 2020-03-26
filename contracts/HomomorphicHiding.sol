@@ -1,6 +1,6 @@
 pragma solidity ^0.6.4;
 
-import "./_lib/elliptic-curve-solidity/contracts/curves/EllipticCurve.sol";
+import "./lib/elliptic-curve-solidity/contracts/curves/EllipticCurve.sol";
 
 struct E
 {
@@ -10,23 +10,23 @@ struct E
 
 library HomomorphicHiding
 {
-	function e(uint x) external pure returns (struct E)
+	function e(uint x) internal pure returns (E memory hh)
+	{
+		(hh.x, hh.y) = EllipticCurve.multipleGeneratorByScalar(x);
+	}
+
+	function add(E memory e1, E memory e2) internal pure returns (E memory hh)
 	{
 
 	}
 
-	function add(struct E e1, struct E e2) external pure returns (struct E)
+	function equals(E memory e1, E memory e2) internal pure returns (bool)
 	{
 
 	}
 
-	function equals(struct E e1, struct E e2) external pure returns (bool)
+	function mul(uint k, E memory e) internal pure returns (E memory hh)
 	{
 
-	}
-
-	function mul(uint k, struct E e) external pure returns (struct E)
-	{
-		
 	}
 }
