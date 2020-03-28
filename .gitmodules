@@ -1,3 +1,0 @@
-[submodule "contracts/elliptic-curve-solidity"]
-	path = contracts/elliptic-curve-solidity
-	url = https://github.com/witnet/elliptic-curve-solidity
