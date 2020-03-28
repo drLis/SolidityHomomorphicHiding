@@ -1,6 +1,6 @@
 pragma solidity ^0.6.4;
 
-import "./lib/elliptic-curve-solidity/contracts/curves/EllipticCurve.sol";
+import "./_lib/elliptic-curve-solidity/contracts/EllipticCurve.sol";
 
 struct E
 {
