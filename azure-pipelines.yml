@@ -19,6 +19,9 @@ steps:
   displayName: 'eth-brownie installation'
 
 - script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+    brownie compile
+  displayName: 'smart contracts compilation'
+
+- script: 
+    brownie test
+  displayName: 'test smart contracts'
