@@ -18,6 +18,10 @@ steps:
     pip3 install eth-brownie
   displayName: 'eth-brownie installation'
 
+- checkout: self
+  submodules: true
+  displayName: 'get submodules'
+
 - script: |
     brownie compile
   displayName: 'smart contracts compilation'
