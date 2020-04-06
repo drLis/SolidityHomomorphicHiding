@@ -9,9 +9,6 @@ trigger:
 pool:
   vmImage: 'windows-2019'
 
-checkout:
-  submodules: true
-
 steps:
 - script: |
     npm -g install ganache-cli
