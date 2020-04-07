@@ -23,7 +23,7 @@ contract TestContract
 		return (e.x, e.y);
 	}
 
-	function add(uint x1, uint y1, uint x2, uint y2) external pure (uint x, uint y)
+	function add(uint x1, uint y1, uint x2, uint y2) external pure returns (uint x, uint y)
 	{
 		E memory e1;
 		E memory e2;
@@ -39,7 +39,7 @@ contract TestContract
 		return (e.x, e.y);
 	}
 
-	function equals(uint x1, uint y1, uint x2, uint y2) external pure (bool)
+	function equals(uint x1, uint y1, uint x2, uint y2) external pure returns (bool)
 	{
 		E memory e1;
 		E memory e2;
@@ -53,7 +53,7 @@ contract TestContract
 		return HomomorphicHiding.equals(e1, e2);
 	}
 
-	function mul(uint x, uint y, uint c) external pure (uint x, uint y)
+	function mul(uint x, uint y, uint c) external pure returns (uint, uint)
 	{
 		E memory e;
 		e.x = x;
