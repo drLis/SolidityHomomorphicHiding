@@ -27,7 +27,7 @@ library HomomorphicHiding
 
 	function mul(uint k, E memory e) internal pure returns (E memory hh)
 	{
-		
+		(hh.x, hh.y) = EllipticCurve.ecMul(k, e.x, e.y, a, p);
 	}
 
 	uint internal constant g_x = 0x79BE667EF9DCBBAC55A06295CE870B07029BFCDB2DCE28D959F2815B16F81798;
