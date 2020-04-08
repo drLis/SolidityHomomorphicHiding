@@ -17,7 +17,7 @@ library HomomorphicHiding
 
 	function add(E memory e1, E memory e2) internal pure returns (E memory hh)
 	{
-
+		(hh.x, hh.y) = EllipticCurve.ecAdd(e1.x, e1.y, e2.x, e2.y, a, p);
 	}
 
 	function equals(E memory e1, E memory e2) internal pure returns (bool)
@@ -27,7 +27,7 @@ library HomomorphicHiding
 
 	function mul(uint k, E memory e) internal pure returns (E memory hh)
 	{
-
+		
 	}
 
 	uint internal constant g_x = 0x79BE667EF9DCBBAC55A06295CE870B07029BFCDB2DCE28D959F2815B16F81798;
