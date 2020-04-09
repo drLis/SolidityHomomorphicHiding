@@ -25,7 +25,7 @@ library HomomorphicHiding
 		return e1.x == e2.x && e1.y == e2.y;
 	}
 
-	function mul(uint k, E memory e) internal pure returns (E memory hh)
+	function mul(E memory e, uint k) internal pure returns (E memory hh)
 	{
 		(hh.x, hh.y) = EllipticCurve.ecMul(k, e.x, e.y, a, p);
 	}
